@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Žaidimų PC – po (pavyzdinė iliustracija)">
+  <rect width="800" height="600" fill="#0369a1"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="6">
+    <rect x="220" y="150" width="360" height="260" rx="18"/>
+    <circle cx="400" cy="280" r="80"/>
+    <path d="M400 200v160M320 280h160M343 223l114 114M457 223L343 337"/>
+  </g>
+  
+  <text x="400" y="475" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="700" fill="#fff">Žaidimų PC – po</text>
+  <text x="400" y="525" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#fff" fill-opacity=".8">Pavyzdys – įkelkite tikrą nuotrauką</text>
+</svg>
