@@ -2,12 +2,12 @@ import Link from "next/link";
 import OrderForm from "@/components/OrderForm";
 import OrderButton from "@/components/OrderButton";
 import { services, pickup } from "@/lib/services";
-import { beforeAfter, faq, howItWorks, processSteps, safety } from "@/lib/content";
+import { beforeAfter, faq, showBeforeAfter, howItWorks, processSteps, safety } from "@/lib/content";
 import { phoneHref, site } from "@/lib/site";
 
 const nav = [
   { href: "#paslaugos", label: "Paslaugos ir kainos" },
-  { href: "#pries-po", label: "Prieš / Po" },
+  ...(showBeforeAfter ? [{ href: "#pries-po", label: "Prieš / Po" }] : []),
   { href: "#procesas", label: "Procesas" },
   { href: "#duk", label: "DUK" },
   { href: "#kontaktai", label: "Kontaktai" },
@@ -213,7 +213,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PRIEŠ / PO */}
+        {/* PRIEŠ / PO – rodoma tik kai showBeforeAfter = true (src/lib/content.ts) */}
+        {showBeforeAfter && (
         <section id="pries-po" className="py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4">
             <SectionTitle eyebrow="Prieš / Po" title="Rezultatas, kurį matote" intro="Kiekvieną įrenginį fotografuojame prieš ir po valymo." />
@@ -241,6 +242,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PROCESAS IR SAUGUMAS */}
         <section id="procesas" className="bg-slate-900 py-16 text-slate-100 sm:py-20">

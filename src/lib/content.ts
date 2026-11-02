@@ -83,6 +83,10 @@ export const faq = [
 
 // Nuotraukos prieš / po. Pakeiskite failus public/pries-po/ kataloge tikromis savo darbų
 // nuotraukomis (rekomenduojama 1200×900 px, JPG/WebP) ir atnaujinkite kelius čia.
+// Kol tikrų nuotraukų nėra, skiltis paslėpta. Įkėlę nuotraukas, pakeiskite į `true` –
+// skiltis ir nuoroda meniu atsiras automatiškai.
+export const showBeforeAfter = false;
+
 export const beforeAfter = [
   {
     title: "Žaidimų PC",
